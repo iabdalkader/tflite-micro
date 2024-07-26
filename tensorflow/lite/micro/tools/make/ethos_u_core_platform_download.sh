@@ -53,7 +53,7 @@ else
 
   git clone "https://review.mlplatform.org/ml/ethos-u/ethos-u-core-platform" ${DOWNLOADED_ETHOS_U_CORE_PLATFORM_PATH} >&2
   pushd ${DOWNLOADED_ETHOS_U_CORE_PLATFORM_PATH} > /dev/null
-  git checkout e25a89dec1cf990f3168dbd6c565e3b0d51cb151 >&2
+  git -c advice.detachedHead=false checkout b96537fe38862a6fb86c093bd0f8e583bc92bf0c
   rm -rf .git
   create_git_repo ./
   apply_patch_to_folder ./ ../../ethos_u_core_platform.patch "TFLM patch"
